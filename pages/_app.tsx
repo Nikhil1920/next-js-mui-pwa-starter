@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 
 const App = ({ Component, pageProps }: AppProps) => {
     const router = useRouter();
@@ -19,6 +20,12 @@ const App = ({ Component, pageProps }: AppProps) => {
 
     return (
         <>
+            <Head>
+                <meta
+                    name="viewport"
+                    content="initial-scale=1, width=device-width"
+                />
+            </Head>
             <Script
                 strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
