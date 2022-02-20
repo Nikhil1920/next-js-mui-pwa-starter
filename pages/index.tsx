@@ -12,7 +12,6 @@ const Home: NextPage = () => {
                     name="description"
                     content="Next App with mui and pwa configured"
                 />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
 
             <main className={styles.main}>
