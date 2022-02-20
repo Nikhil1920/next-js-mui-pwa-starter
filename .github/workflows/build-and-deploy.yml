@@ -23,7 +23,9 @@ jobs:
             - name: Build site
               run: npm run build-static
             - name: Add nojekyll file
-              run: touch .nojekyll
+              run: |
+                  cd out/
+                  touch .nojekyll
             - name: Deploy to gh-pages
               uses: JamesIves/github-pages-deploy-action@v4.2.5
               with:
