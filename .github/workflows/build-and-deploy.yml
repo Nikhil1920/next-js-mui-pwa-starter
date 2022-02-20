@@ -22,6 +22,8 @@ jobs:
                   sed -i '12ibasePath: "/next-js-mui-pwa-starter",' next.config.js
             - name: Build site
               run: npm run build-static
+            - name: Add nojekyll file
+              run: touch .nojekyll
             - name: Deploy to gh-pages
               uses: JamesIves/github-pages-deploy-action@v4.2.5
               with:
