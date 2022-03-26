@@ -16,7 +16,7 @@ jobs:
               with:
                   node-version: "16.x"
             - name: Install dependencies
-              run: npm ci
+              run: npm i
             - name: Add basepath to next configuration
               run: |
                   sed -i '12ibasePath: "/next-js-mui-pwa-starter",' next.config.js
