@@ -63,7 +63,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           `,
                 }}
             />
-            <CssVarsProvider defaultMode="dark">
+            <CssVarsProvider defaultMode="system">
                 <TopBar title="Starter" link="/" />
                 <Component {...pageProps} />
             </CssVarsProvider>
