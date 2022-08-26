@@ -23,7 +23,7 @@ jobs:
               run: pnpm install
             - name: Add basepath to next configuration
               run: |
-                  sed -i '12ibasePath: "/next-js-mui-pwa-starter",' next.config.js
+                  sed -i '9ibasePath: "/next-js-mui-pwa-starter",' next.config.js
             - name: Build site
               run: npm run build-static
             - name: Add nojekyll file
