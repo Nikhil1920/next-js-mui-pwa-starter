@@ -1,11 +1,12 @@
+import { Container } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Copyright from "../components/Copyright";
-import styles from "../styles/Home.module.css";
+import ModeSwitcher from "../components/ModeSwitcher";
 
 const Home: NextPage = () => {
     return (
-        <div className={styles.container}>
+        <>
             <Head>
                 <title>Next App with mui and pwa configured</title>
                 <meta
@@ -13,22 +14,19 @@ const Home: NextPage = () => {
                     content="Next App with mui and pwa configured"
                 />
             </Head>
-
-            <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Welcome to <a href="https://nextjs.org">Next.js! starter</a>
-                </h1>
-
-                <p className={styles.description}>
-                    Get started by editing{" "}
-                    <code className={styles.code}>pages/index.tsx</code>
-                </p>
-            </main>
+            <Container
+                maxWidth="lg"
+                sx={{
+                    marginTop: "2rem",
+                }}
+            >
+                <ModeSwitcher />
+            </Container>
 
             <footer>
                 <Copyright />
             </footer>
-        </div>
+        </>
     );
 };
 

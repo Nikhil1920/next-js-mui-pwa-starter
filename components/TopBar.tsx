@@ -12,7 +12,7 @@ type AppBarProps = {
 const TopBar = ({ title, link }: AppBarProps) => {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" color="primary">
                 <Toolbar>
                     <NextLink href={link} passHref>
                         <Link href={link} color="inherit" underline="none">
