@@ -1,11 +1,13 @@
 import { Button, useColorScheme } from "@mui/material";
-import React from "react";
+import Moon from "@mui/icons-material/DarkMode";
+import Sun from "@mui/icons-material/LightMode";
+import { useEffect, useState } from "react";
 
 const ModeSwitcher = () => {
     const { mode, setMode } = useColorScheme();
-    const [mounted, setMounted] = React.useState(false);
+    const [mounted, setMounted] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         setMounted(true);
     }, []);
 
@@ -24,7 +26,7 @@ const ModeSwitcher = () => {
                 }
             }}
         >
-            {mode === "light" ? "Dark" : "Light"}
+            {mode === "light" ? <Moon /> : <Sun />}
         </Button>
     );
 };
