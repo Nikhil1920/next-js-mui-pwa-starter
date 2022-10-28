@@ -7,6 +7,7 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
 import TopBar from "../components/TopBar";
+import CssBaseline from "@mui/material/CssBaseline";
 
 const App = ({ Component, pageProps }: AppProps) => {
     const router = useRouter();
@@ -64,6 +65,7 @@ const App = ({ Component, pageProps }: AppProps) => {
                 }}
             />
             <CssVarsProvider defaultMode="system">
+                <CssBaseline />
                 <TopBar title="Starter" link="/" />
                 <Component {...pageProps} />
             </CssVarsProvider>
